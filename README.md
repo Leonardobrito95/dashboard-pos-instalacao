@@ -1,16 +1,12 @@
-# 📞 Dashboard de Acompanhamento Pós-Instalação
+# Dashboard de Acompanhamento Pós-Instalação
 
-> Dashboard que mede a qualidade do contato pós-venda de uma ISP: quais clientes recém-instalados foram contatados, quem ficou esquecido, e como isso se relaciona com churn, lendo direto do sistema de chamados (IXC).
+Dashboard que mede a qualidade do contato pós-venda de uma ISP: quais clientes recém-instalados foram contatados, quem ficou esquecido, e como isso se relaciona com churn, lendo direto do sistema de chamados (IXC).
 
-![Python](https://img.shields.io/badge/Python-3.11+-blue?logo=python&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-dashboard-000000?logo=flask&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-IXC-4479A1?logo=mysql&logoColor=white)
-
-## 🎯 O problema
+## O problema que isso resolve
 
 Cliente recém-instalado é o mais frágil: se ninguém faz o contato de acompanhamento nos primeiros dias, a chance de cancelamento dispara. Mas a equipe não tinha visibilidade de quem já foi contatado e quem não, nem de quais bairros ou empresas de instalação concentravam mais problemas.
 
-## 💡 A solução
+## O que o sistema faz
 
 Um dashboard que lê os chamados (`su_ticket`) do IXC e transforma em indicadores de operação:
 
@@ -20,16 +16,16 @@ Um dashboard que lê os chamados (`su_ticket`) do IXC e transforma em indicadore
 - **Recorte por bairro e por empresa de instalação:** onde os problemas se concentram.
 - **Exportação CSV:** para relatórios e cruzamentos externos.
 
-## 🛠️ Stack
+## Stack
 
 | Camada | Tecnologia |
 |---|---|
-| Backend | Python e **Flask** |
-| Fonte de dados | **MySQL** (IXC, tabela `su_ticket`) |
+| Backend | Python e Flask |
+| Fonte de dados | MySQL (IXC, tabela `su_ticket`) |
 | Coleta | Threading com cache em memória |
 | Export | CSV nativo |
 
-## 🚀 Rodando localmente
+## Rodando localmente
 
 ```bash
 python -m venv venv && source venv/bin/activate
